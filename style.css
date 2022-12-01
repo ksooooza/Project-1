@@ -1,0 +1,65 @@
+body {
+    background: black;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 54px;
+    margin-right: 50px;
+  }
+  
+  input {
+   margin: 5px;
+   background: black;
+   color: white;
+   font-size: 64px;
+   text-align: center;
+   border: solid white;
+   text-transform: uppercase;
+   caret-color: transparent;
+  }
+  
+  .row1 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .row2 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .row3 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .row4 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .row5 {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .row6 {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    background-color: black;
+    border: transparent;
+    text-shadow: none;
+  }
+
+  p {
+    color: white;
+    font-size: 24px;
+    margin-right: 50px;
+  }
