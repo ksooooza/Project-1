@@ -13,8 +13,13 @@ MY code for this project was written in Javascript for gameplay with HTML and CS
 <img width="346" alt="Screen Shot 2022-12-01 at 3 24 16 PM" src="https://user-images.githubusercontent.com/116371562/205152390-445369b2-eb1d-4e4d-8042-06fcb5aaeb6a.png">
 (K)Wordle mid-way through game play
 
+
+
 <img width="347" alt="Screen Shot 2022-12-01 at 3 24 36 PM" src="https://user-images.githubusercontent.com/116371562/205152392-f74fc560-34c1-4dea-bd83-ead139b893cf.png">
 Lucky us! We won the (K)Wordle
+
+
+
 
 Some of the bigger challenges I faced:
 -Figuring out how to compare the user input guess to the randomly generated answer word
