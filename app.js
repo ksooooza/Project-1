@@ -95,7 +95,7 @@ submitGuess1.onclick = function() {
         }
     }
 
-    setTimeout(makeMessageDisappear, 2000);
+    setTimeout(makeMessageDisappear(), 2000);
 
     // function exitFunction() {
     //     for (let i = 0; i < 5; i++) {
@@ -233,7 +233,7 @@ submitGuess2.onclick = function() {
         }
     }
 
-    setTimeout(makeMessageDisappear, 2000);
+    setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess2() {
         for (let i = 0; i < 5; i++) {
@@ -332,7 +332,7 @@ submitGuess3.onclick = function() {
         }
     }
 
-    setTimeout(makeMessageDisappear, 2000);
+    setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess3() {
         for (let i = 0; i < 5; i++) {
@@ -434,7 +434,7 @@ submitGuess4.onclick = function() {
         }
     }
 
-    setTimeout(makeMessageDisappear, 2000);
+    setTimeout(makeMessageDisappear(), 2000);
     
     function compareGuess4() {
         for (let i = 0; i < 5; i++) {
@@ -535,7 +535,7 @@ submitGuess5.onclick = function() {
         }
     }
 
-    setTimeout(makeMessageDisappear, 2000);
+    setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess5() {
         for (let i = 0; i < 5; i++) {
@@ -616,18 +616,22 @@ submitGuess6.onclick = function() {
         for (let i = 0; i < 5; i++) {
             //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
             for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
+                if (guess6[i] !== wordList[j][i]) {
+                document.getElementById("invalidguess").innerHTML = "Invalid Guess"
+                }  
+            }
         }
     }
 
     compareToWordList();
+
+    function makeMessageDisappear() {
+        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
+            document.getElementById("invalidguess").innerHTML = ""
+        }
+    }
+
+    setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess6() {
         for (let i = 0; i < 5; i++) {
