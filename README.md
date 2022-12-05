@@ -19,10 +19,15 @@ My code for this project was written in Javascript for gameplay with HTML and CS
 Lucky us! We won the (K)Wordle
 
 
+Click to play my (K)Wordle:
+
+
 
 
 Some of the bigger challenges I faced:
 -Comparing the guesses to the randomly generated word and showing "Invalid Guess" if it's not on the word list
+
+-GitHub: I actually had a lot of trouble getting my own repo up and running, hence why I don't have very many commits at the beginning of my project because I was working on it in the mean time until I could get a grown up to help me.
 
 Key learnings and takeaways:
 -Thinking in the little tiniest of steps to achieve the goal and gradually adding more functionality as the stuff before it works
