@@ -7,27 +7,15 @@ const wordList = ["aback", "abase", "abate", "abbey", "abbot", "abhor",
 //Chooses a random index corresponding to a word in the words array
  function chooseRandomWord() {
     i = Math.floor(Math.random() * 292);
-    //console.log(wordList[i]);
    //Make sure to update this number with a longer word list!
  }
 
 chooseRandomWord();
 let answerindex = wordList[i];
 
-//Split computer generated word into letters
-// function splitWord() {
-//     for (let s = 0; s < answer.length; s++) {
-//         let arr = [];
-//         arr.push(answer.charAt(s));
-//         console.log(arr);
-//     } 
-// }
-
 let answer = answerindex.split('');
 console.log(answer);
 
-//splitWord(answer);
-//console.log(answer.splitWord());
 
 //Collect user input for guess 1
 const guess1 = document.querySelector('[class="guess1"]')
@@ -49,45 +37,15 @@ let submitGuess1 = document.getElementById("checkguess1");
 submitGuess1.onclick = function() {
     //Gets values from all input boxes
     let zero = document.querySelector('[id="0"]').value;
-    //console.log(zero);
     let one = document.querySelector('[id="1"]').value;
-    //console.log(one);
     let two = document.querySelector('[id="2"]').value;
-    //console.log(two);
     let three = document.querySelector('[id="3"]').value;
-    //console.log(three);
     let four = document.querySelector('[id="4"]').value;
-    //console.log(four);
 
     //Pushes all of the values from input boxes in row 1 into an array and saves it as guess1
     let guess1 = [zero, one, two, three, four];
-    console.log(guess1);
 
     //Compares word collected from guess 1 to the one selected from the list of possible words
-    function compareToWordList() {
-        for (let i = 0; i < 290; i++) {
-        for (let j = 0; j < 5; j++) {
-            if (guess1[j] === (wordList[i][j])) {
-            document.getElementById("invalidguess").innerHTML = ""
-            } else {
-            document.getElementById("invalidguess").innerHTML = "Invalid guess"   
-            }
-         }
-     } 
-    }
-     
-
-    
-    compareToWordList();
-
-    function makeMessageDisappear() {
-            if (document.getElementById("invalidguess").innerHTML = "Invalid guess") {
-                document.getElementById("invalidguess").innerHTML = " "
-            }
-    }
-
-    setTimeout(makeMessageDisappear, 2000);
-
 
     //Locks in guess so you can't go back and change it after submission
     function lockButton() {
@@ -109,20 +67,15 @@ submitGuess1.onclick = function() {
     }  
     lockButton();
 
-    //console.log(guess1);
-
     
 //Compares guess 1 to the answer
     function compareGuess1() {
         for (let i = 0; i < 5; i++) {
            if (answer[i] === guess1[i]) {
-           //console.log("Match")
            document.getElementById([i]).style.background = "green"
             } else if (answer.includes(guess1[i])) {
-             //console.log("Included");
              document.getElementById([i]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i]).style.background = "gray"
             }
         }
@@ -178,54 +131,20 @@ submitGuess2.onclick = function() {
     lockButton();
 
     let five = document.querySelector('[id="5"]').value;
-    //console.log(five);
     let six = document.querySelector('[id="6"]').value;
-    //console.log(six);
     let seven = document.querySelector('[id="7"]').value;
-    //console.log(seven);
     let eight = document.querySelector('[id="8"]').value;
-    //console.log(eight);
     let nine = document.querySelector('[id="9"]').value;
-    //console.log(nine);
 
     let guess2 = [five, six, seven, eight, nine];
-    //console.log(guess1);
-    
-    // function compareToWordList() {
-    //     for (let i = 0; i < 5; i++) {
-    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 230; j++) {
-    //             if (guess2[i] === wordList[j][i]) {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //             } else {
-    //                 if (guess2[i] !== wordList[j][i])
-    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
-    //                 }
-    //             }
-    //         }  
-    // }
-    
-
-    // compareToWordList();
-
-    // function makeMessageDisappear() {
-    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //         }
-    // }
-
-    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess2() {
         for (let i = 0; i < 5; i++) {
            if (answer[i] === guess2[i]) {
-           //console.log("Match")
            document.getElementById([i + 5]).style.background = "green";
             } else if (answer.includes(guess2[i])) {
-             //console.log("Included");
              document.getElementById([i + 5]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i + 5]).style.background = "gray"
             }
             }
@@ -277,54 +196,21 @@ submitGuess3.onclick = function() {
     lockButton();
 
     let ten = document.querySelector('[id="10"]').value;
-    //console.log(ten);
     let eleven = document.querySelector('[id="11"]').value;
-    //console.log(eleven);
     let twelve = document.querySelector('[id="12"]').value;
-    //console.log(twelve);
     let thirteen = document.querySelector('[id="13"]').value;
-    //console.log(thirteen);
     let fourteen = document.querySelector('[id="14"]').value;
-    //console.log(fourteen);
 
     let guess3 = [ten, eleven, twelve, thirteen, fourteen]
-    //console.log(guess3)
-
-    // function compareToWordList() {
-    //     for (let i = 0; i < 5; i++) {
-    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 230; j++) {
-    //             if (guess3[i] === wordList[j][i]) {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //             } else {
-    //                 if (guess3[i] !== wordList[j][i])
-    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
-    //                 }
-    //             }
-    //         }  
-    // }
     
-
-    // compareToWordList();
-
-    // function makeMessageDisappear() {
-    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //         }
-    // }
-
-    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess3() {
         for (let i = 0; i < 5; i++) {
            if (answer[i] === guess3[i]) {
-           //console.log("Match")
            document.getElementById([i + 10]).style.background = "green";
             } else if (answer.includes(guess3[i])) {
-             //console.log("Included");
              document.getElementById([i + 10]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i + 10]).style.background = "gray"
             }
         }
@@ -379,55 +265,21 @@ submitGuess4.onclick = function() {
     lockButton();
 
     let fifteen = document.querySelector('[id="15"]').value;
-    //console.log(fifteen);
     let sixteen = document.querySelector('[id="16"]').value;
-    //console.log(sixteen);
     let seventeen = document.querySelector('[id="17"]').value;
-    //console.log(seventeen);
     let eighteen = document.querySelector('[id="18"]').value;
-    //console.log(eighteen);
     let nineteen = document.querySelector('[id="19"]').value;
-    //console.log(nineteen);
 
     let guess4 = [fifteen, sixteen, seventeen, eighteen, nineteen]
-    //console.log(guess4)
-
-    // function compareToWordList() {
-    //     for (let i = 0; i < 5; i++) {
-    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 230; j++) {
-    //             if (guess4[i] === wordList[j][i]) {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //             } else {
-    //                 if (guess4[i] !== wordList[j][i])
-    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
-    //                 }
-    //             }
-    //         }  
-    // }
-    
-
-    // compareToWordList();
-
-    // function makeMessageDisappear() {
-    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //         }
-    // }
-
-    // setTimeout(makeMessageDisappear(), 2000);
     
     function compareGuess4() {
         for (let i = 0; i < 5; i++) {
             for (let j = 15; j < 20; j++) {
            if (answer[i] === guess4[i]) {
-           //console.log("Match")
            document.getElementById([i + 15]).style.background = "green";
             } else if (answer.includes(guess4[i])) {
-             //console.log("Included");
              document.getElementById([i + 15]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i + 15]).style.background = "gray"
             }
         }
@@ -480,54 +332,21 @@ submitGuess5.onclick = function() {
     lockButton();
 
     let twenty = document.querySelector('[id="20"]').value;
-    //console.log(twenty);
     let twentyone = document.querySelector('[id="21"]').value;
-    //console.log(twentyone);
     let twentytwo = document.querySelector('[id="22"]').value;
-    //console.log(twentytwo);
     let twentythree = document.querySelector('[id="23"]').value;
-    //console.log(twentythree);
     let twentyfour = document.querySelector('[id="24"]').value;
-    //console.log(twentyfour);
 
     let guess5 = [twenty, twentyone, twentytwo, twentythree, twentyfour]
-    //console.log(guess5);
-
-    // function compareToWordList() {
-    //     for (let i = 0; i < 5; i++) {
-    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 230; j++) {
-    //             if (guess5[i] === wordList[j][i]) {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //             } else {
-    //                 if (guess5[i] !== wordList[j][i])
-    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
-    //                 }
-    //             }
-    //         }  
-    // }
     
-
-    // compareToWordList();
-
-    // function makeMessageDisappear() {
-    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
-    //             document.getElementById("invalidguess").innerHTML = ""
-    //         }
-    // }
-
-    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess5() {
         for (let i = 0; i < 5; i++) {
            if (answer[i] === guess5[i]) {
-           //console.log("Match")
            document.getElementById([i + 20]).style.background = "green";
             } else if (answer.includes(guess5[i])) {
-             //console.log("Included");
              document.getElementById([i + 20]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i + 20]).style.background = "gray"
             }
         }
@@ -580,54 +399,20 @@ submitGuess6.onclick = function() {
     lockButton();
 
     let twentyfive = document.querySelector('[id="25"]').value;
-    //console.log(twentyfive);
     let twentysix = document.querySelector('[id="26"]').value;
-    //console.log(twentysix);
     let twentyseven = document.querySelector('[id="27"]').value;
-    //console.log(twentyseven);
     let twentyeight = document.querySelector('[id="28"]').value;
-    //console.log(twentyeight);
     let twentynine = document.querySelector('[id="29"]').value;
-    //console.log(twentynine);
 
     let guess6 = [twentyfive, twentysix, twentyseven, twentyeight, twentynine]
-    //console.log(guess6)
     
-    // function compareToWordList() {
-    //     for (let i = 0; i < 5; i++) {
-    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 230; j++) {
-    //             if (guess6[i] === wordList[j][i]) {
-    //             document.getElementById("invalidguess").innerHTML = " "
-    //             } else {
-    //                 if (!(guess6[i] === wordList[j][i]))
-    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
-    //                 }
-    //             }
-    //         }  
-    // }
-    
-
-    // compareToWordList();
-
-    // function makeMessageDisappear() {
-    //         if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-    //             document.getElementById("invalidguess").innerHTML = " "
-    //         }
-    // }
-
-    // setTimeout(makeMessageDisappear, 2000);
-
     function compareGuess6() {
         for (let i = 0; i < 5; i++) {
            if (answer[i] === guess6[i]) {
-           //console.log("Match")
            document.getElementById([i + 25]).style.background = "green";
             } else if (answer.includes(guess6[i])) {
-             //console.log("Included");
              document.getElementById([i + 25]).style.background = "orange"
             } else {
-           //console.log("Not Matched");
            document.getElementById([i + 25]).style.background = "gray"
             }
         }
@@ -643,16 +428,3 @@ submitGuess6.onclick = function() {
 
 checkWin();
 };
-
-
-
- //TO DO LIST
- //1. Add backspace function
- //2. Add a keyboard at the bottom
- //3. Needing to submit guess 1 before guess 2 etc.
- //4. Making it so that you can't enter another guess after you've wont the game
- //5. Do it like the actual wordle does with including two of the same letter etc
- //6. Adding animations
- //7. Take out uneccessary code
- //8. Make a readME
- //9. Get it up and running on gitHub pages
