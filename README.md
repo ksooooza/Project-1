@@ -19,7 +19,7 @@ My code for this project was written in Javascript for gameplay with HTML and CS
 Lucky us! We won the (K)Wordle
 
 
-Click to play my (K)Wordle:
+Click to play my (K)Wordle: https://ksooooza.github.io/Project-1/
 
 
 
