@@ -2,21 +2,11 @@
 
 const wordList = ["aback", "abase", "abate", "abbey", "abbot", "abhor",
  "abide", "abled", "abode", "abort", "about", "above", "abuse", "abyss",
- "acorn", "acrid", "bacon", "badge", "badly", "bagel", "baggy", "baker",
- "baler", "balmy", "banal", "banjo", "barge", "baron", "basal", "basic",
- "basin", "cabal", "cabby", "cabin", "cable", "cacao", "cache", "cacti",
- "caddy", "cadet", "cagey", "cairn", "camel", "cameo", "canal", "candy",
- "canny", "daddy", "daily", "dairy", "daisy", "dally", "dance", "dandy",
- "datum", "daunt", "dealt", "death", "debar", "debit", "debug", "debut",
- "decal", "eager", "eagle", "early", "earth", "easel", "eaten", "eater",
- "ebony", "eclat", "edict", "edify", "eerie", "egret", "eight", "eject",
- "eking", "fable", "facet", "faint", "fairy", "faith", "false", "fancy",
- "fanny", "farce", "fatal", "fatty", "fault", "fauna", "favor", "feast",
- "fecal", "feign", "fella", "felon", "femme", "femur"]
+ "acorn", "acrid", "actor", "acute", "adage", "adapt", "adept", "admin", "admit", "adobe", "adopt", "adore", "adorn", "adult", "affix", "afire", "afoot", "afoul", "after", "again", "agape", "agate", "agent", "agile", "aging", "aglow", "agony", "agree", "ahead", "aider", "aisle", "alarm", "album", "alert", "algae", "alibi", "alien", "align", "alike", "alive", "allay", "alley", "allot", "allow", "alloy", "aloft", "alone", "along", "aloof", "aloud", "alpha", "altar", "alter", "amass", "amaze", "amber", "amble", "amend", "amiss", "amity", "among", "amply", "amply", "amuse", "angel", "angel", "anger", "angle", "angry", "angst", "anime", "ankle", "annex", "annoy", "annul", "anode", "antic", "anvil", "aorta", "apart", "aphid", "aping", "apnea", "apple", "apply", "apron", "aptly", "arbor", "ardor", "arena", "argue", "arise", "aroma", "arose", "array", "arrow", "arson", "artsy", "ascot", "ashen", "aside", "askew", "assay", "asset", "atoll", "atone", "attic", "audio", "audit", "augur", "aunty", "avail", "avert", "avian", "avoid", "await", "awake", "award", "aware", "awash", "awful", "awoke", "axial", "axiom", "axion", "azure", "bacon", "badge", "badly", "bagel", "baggy", "baker", "baler", "balmy", "banal", "banjo", "barge", "baron", "basal", "basic", "basin", "basis", "baste", "batch", "bathe", "baton", "batty", "bawdy", "bayou", "beach", "beady", "beard", "beast", "beech", "beefy", "befit", "began", "begat", "beget", "begin", "begun", "being", "belch", "belie", "belle", "belly", "below", "bench", "beret", "berry", "berth", "beset", "betel", "bevel", "bezel", "bible", "bicep", "biddy", "bigot", "bilge", "billy", "binge", "bingo", "biome", "birch", "birth", "bison", "bitty", "black", "blade", "blame", "bland", "blank", "blare", "blast", "blaze", "bleak", "bleat", "bleed", "bleep", "blend", "bless", "blimp", "blind", "blink", "bliss", "blitz", "bloat","cabal", "cabby", "cabin", "cable", "cacao", "cache", "cacti", "caddy", "cadet", "cagey", "cairn", "camel", "cameo", "canal", "candy", "canny", "daddy", "daily", "dairy", "daisy", "dally", "dance", "dandy", "datum", "daunt", "dealt", "death", "debar", "debit", "debug", "debut", "decal", "eager", "eagle", "early", "earth", "easel", "eaten", "eater", "ebony", "eclat", "edict", "edify", "eerie", "egret", "eight", "eject", "eking", "fable", "facet", "faint", "fairy", "faith", "false", "fancy", "fanny", "farce", "fatal", "fatty", "fault", "fauna", "favor", "feast", "fecal", "feign", "fella", "felon", "femme", "femur", ]
 
 //Chooses a random index corresponding to a word in the words array
  function chooseRandomWord() {
-    i = Math.floor(Math.random() * 101);
+    i = Math.floor(Math.random() * 292);
     //console.log(wordList[i]);
    //Make sure to update this number with a longer word list!
  }
@@ -33,11 +23,11 @@ let answerindex = wordList[i];
 //     } 
 // }
 
-// splitWord(answer);
-//console.log(answer.splitWord();
-
 let answer = answerindex.split('');
 console.log(answer);
+
+//splitWord(answer);
+//console.log(answer.splitWord());
 
 //Collect user input for guess 1
 const guess1 = document.querySelector('[class="guess1"]')
@@ -71,44 +61,33 @@ submitGuess1.onclick = function() {
 
     //Pushes all of the values from input boxes in row 1 into an array and saves it as guess1
     let guess1 = [zero, one, two, three, four];
-    
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
-        }
-    }
+    console.log(guess1);
 
+    //Compares word collected from guess 1 to the one selected from the list of possible words
+    function compareToWordList() {
+        for (let i = 0; i < 290; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (guess1[j] === (wordList[i][j])) {
+            document.getElementById("invalidguess").innerHTML = ""
+            } else {
+            document.getElementById("invalidguess").innerHTML = "Invalid guess"   
+            }
+         }
+     } 
+    }
+     
+
+    
     compareToWordList();
 
     function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
+            if (document.getElementById("invalidguess").innerHTML = "Invalid guess") {
+                document.getElementById("invalidguess").innerHTML = " "
+            }
     }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    setTimeout(makeMessageDisappear, 2000);
 
-    // function exitFunction() {
-    //     for (let i = 0; i < 5; i++) {
-    //     //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-    //         for (let j = 0; j < 100; j++) {
-    //             if (guess1[i] !== wordList[j][i]) {
-    //                 return; 
-    //             } 
-    //         }
-    //     }
-    // }
-
-    // exitFunction();
 
     //Locks in guess so you can't go back and change it after submission
     function lockButton() {
@@ -158,10 +137,11 @@ submitGuess1.onclick = function() {
         }
     }
 
-    checkWin();
+    checkWin(); 
 }
-    
 
+
+    
 //Collect user input for guess 2
 const guess2 = document.querySelector('[class="guess2"]')
 const input2 = guess1.querySelectorAll('.inputs2 input')
@@ -175,6 +155,7 @@ function handleInput2(e) {
 guess2.addEventListener('input', handleInput2);
 
 let submitGuess2 = document.getElementById("checkguess2");
+
 
 submitGuess2.onclick = function() {
     function lockButton() {
@@ -210,30 +191,30 @@ submitGuess2.onclick = function() {
     let guess2 = [five, six, seven, eight, nine];
     //console.log(guess1);
     
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
-        }
-    }
+    // function compareToWordList() {
+    //     for (let i = 0; i < 5; i++) {
+    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
+    //         for (let j = 0; j < 230; j++) {
+    //             if (guess2[i] === wordList[j][i]) {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //             } else {
+    //                 if (guess2[i] !== wordList[j][i])
+    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
+    //                 }
+    //             }
+    //         }  
+    // }
+    
 
-    compareToWordList();
+    // compareToWordList();
 
-    function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
-    }
+    // function makeMessageDisappear() {
+    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //         }
+    // }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess2() {
         for (let i = 0; i < 5; i++) {
@@ -309,30 +290,30 @@ submitGuess3.onclick = function() {
     let guess3 = [ten, eleven, twelve, thirteen, fourteen]
     //console.log(guess3)
 
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
-        }
-    }
+    // function compareToWordList() {
+    //     for (let i = 0; i < 5; i++) {
+    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
+    //         for (let j = 0; j < 230; j++) {
+    //             if (guess3[i] === wordList[j][i]) {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //             } else {
+    //                 if (guess3[i] !== wordList[j][i])
+    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
+    //                 }
+    //             }
+    //         }  
+    // }
+    
 
-    compareToWordList();
+    // compareToWordList();
 
-    function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
-    }
+    // function makeMessageDisappear() {
+    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //         }
+    // }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess3() {
         for (let i = 0; i < 5; i++) {
@@ -411,30 +392,30 @@ submitGuess4.onclick = function() {
     let guess4 = [fifteen, sixteen, seventeen, eighteen, nineteen]
     //console.log(guess4)
 
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
-        }
-    }
+    // function compareToWordList() {
+    //     for (let i = 0; i < 5; i++) {
+    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
+    //         for (let j = 0; j < 230; j++) {
+    //             if (guess4[i] === wordList[j][i]) {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //             } else {
+    //                 if (guess4[i] !== wordList[j][i])
+    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
+    //                 }
+    //             }
+    //         }  
+    // }
+    
 
-    compareToWordList();
+    // compareToWordList();
 
-    function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
-    }
+    // function makeMessageDisappear() {
+    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //         }
+    // }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    // setTimeout(makeMessageDisappear(), 2000);
     
     function compareGuess4() {
         for (let i = 0; i < 5; i++) {
@@ -512,30 +493,30 @@ submitGuess5.onclick = function() {
     let guess5 = [twenty, twentyone, twentytwo, twentythree, twentyfour]
     //console.log(guess5);
 
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess1[i] === wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = ""
-                } else {
-                    if (guess1[i] !== wordList[j][i]) {
-                    document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                    }
-                }
-            }  
-        }
-    }
+    // function compareToWordList() {
+    //     for (let i = 0; i < 5; i++) {
+    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
+    //         for (let j = 0; j < 230; j++) {
+    //             if (guess5[i] === wordList[j][i]) {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //             } else {
+    //                 if (guess5[i] !== wordList[j][i])
+    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
+    //                 }
+    //             }
+    //         }  
+    // }
+    
 
-    compareToWordList();
+    // compareToWordList();
 
-    function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
-    }
+    // function makeMessageDisappear() {
+    //         if (document.getElementById("invalidguess").innerHTML = 'Invalid Guess') {
+    //             document.getElementById("invalidguess").innerHTML = ""
+    //         }
+    // }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    // setTimeout(makeMessageDisappear(), 2000);
 
     function compareGuess5() {
         for (let i = 0; i < 5; i++) {
@@ -612,26 +593,30 @@ submitGuess6.onclick = function() {
     let guess6 = [twentyfive, twentysix, twentyseven, twentyeight, twentynine]
     //console.log(guess6)
     
-    function compareToWordList() {
-        for (let i = 0; i < 5; i++) {
-            //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
-            for (let j = 0; j < 100; j++) {
-                if (guess6[i] !== wordList[j][i]) {
-                document.getElementById("invalidguess").innerHTML = "Invalid Guess"
-                }  
-            }
-        }
-    }
+    // function compareToWordList() {
+    //     for (let i = 0; i < 5; i++) {
+    //         //MAKE SURE TO CHANGE THIS NUMBER IF THE WORD LIST GETS LONGER
+    //         for (let j = 0; j < 230; j++) {
+    //             if (guess6[i] === wordList[j][i]) {
+    //             document.getElementById("invalidguess").innerHTML = " "
+    //             } else {
+    //                 if (!(guess6[i] === wordList[j][i]))
+    //                 document.getElementById("invalidguess").innerHTML = "Invalid Guess" 
+    //                 }
+    //             }
+    //         }  
+    // }
+    
 
-    compareToWordList();
+    // compareToWordList();
 
-    function makeMessageDisappear() {
-        if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
-            document.getElementById("invalidguess").innerHTML = ""
-        }
-    }
+    // function makeMessageDisappear() {
+    //         if (document.getElementById("invalidguess").innerHTML = "Invalid Guess") {
+    //             document.getElementById("invalidguess").innerHTML = " "
+    //         }
+    // }
 
-    setTimeout(makeMessageDisappear(), 2000);
+    // setTimeout(makeMessageDisappear, 2000);
 
     function compareGuess6() {
         for (let i = 0; i < 5; i++) {
@@ -652,7 +637,7 @@ submitGuess6.onclick = function() {
         if (answer[0] === guess6[0] && answer[1] === guess6[1] && answer[2] === guess6[2] && answer[3] === guess6[3] && answer[4] === guess6[4]) {
         document.getElementById("winorlosemessage").innerHTML = "YOU WIN!"
     } else {
-        document.getElementById("winorlosemessage").innerHTML = "YOU LOSE!"
+        document.getElementById("winorlosemessage").innerHTML = `YOU LOSE! The word was ${answerindex}.`
     }
 }
 
@@ -665,8 +650,9 @@ checkWin();
  //1. Add backspace function
  //2. Add a keyboard at the bottom
  //3. Needing to submit guess 1 before guess 2 etc.
- //4. Adding animations
- //5. Adding more words to the array
- //6. Take out uneccessary code
- //7. Make a readME
- //8. Get it up and running on gitHub pages
+ //4. Making it so that you can't enter another guess after you've wont the game
+ //5. Do it like the actual wordle does with including two of the same letter etc
+ //6. Adding animations
+ //7. Take out uneccessary code
+ //8. Make a readME
+ //9. Get it up and running on gitHub pages
