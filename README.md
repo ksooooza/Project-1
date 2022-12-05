@@ -25,18 +25,18 @@ Some of the bigger challenges I faced:
 -Comparing the guesses to the randomly generated word and showing "Invalid Guess" if it's not on the word list
 
 Key learnings and takeaways:
--Thinking in the little tiniest of steps to achieve the goal and gradually adding more functionality as the stuff before it works. 
--console.log everthing so you know what you're working with. 
--COMMIT COMMIT COMMIT!! I had a previous version of a function that I had working and I didn't commit it before I started messing with it, and I spent a looooong time trying to get it working again. 
+-Thinking in the little tiniest of steps to achieve the goal and gradually adding more functionality as the stuff before it works. return
+-console.log everthing so you know what you're working with. return
+-COMMIT COMMIT COMMIT!! I had a previous version of a function that I had working and I didn't commit it before I started messing with it, and I spent a looooong time trying to get it working again. return
 
 
 Some goals for the future for this game that I didn't get to this time around:  
--Figuring out how to collect the guesses IN ORDER (can't submit a guess 5 before guess 2 etc.). 
--Writing a backspace function so that it would move through each input box on the backspace key when a user deleted their answer before submission. 
--In the real wordle, if you guess two of the same letter but only one of that letter is actually in the word, only one will highlight as orange or green, whereas when I'm using .includes to highlight things as yellow, it would highlight both instances of the letter in your guess, which make it a little harder to guess. 
--Adding a "keyboard" so you can see the letters you've already guessed. 
--Adding animation. 
--Add more words to the possible words array for more guessing fun!  
+-Figuring out how to collect the guesses IN ORDER (can't submit a guess 5 before guess 2 etc.). return
+-Writing a backspace function so that it would move through each input box on the backspace key when a user deleted their answer before submission. return
+-In the real wordle, if you guess two of the same letter but only one of that letter is actually in the word, only one will highlight as orange or green, whereas when I'm using .includes to highlight things as yellow, it would highlight both instances of the letter in your guess, which make it a little harder to guess. return
+-Adding a "keyboard" so you can see the letters you've already guessed. return
+-Adding animation. return
+-Add more words to the possible words array for more guessing fun!  return
 
 Sorces:
 https://www.nytimes.com/2022/01/03/technology/wordle-word-game-creator.html
